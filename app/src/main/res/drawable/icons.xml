@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+
+        android:id="@+id/flight_take_off"
+        android:icon="@mipmap/ic_flight_takeoff_black_24dp"
+        android:title="Departure"
+
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/flight_land"
+        android:icon="@mipmap/ic_flight_land_black_24dp"
+        android:title="Arrival"
+        app:showAsAction="always"/>
+
+</layer-list>

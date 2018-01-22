@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Schedule Manager</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_dash_board">Dash Board</string>
+    <string name="tab_text_1">My Schedule</string>
+    <string name="tab_text_2">Other\'s Schedule</string>
+    <string name="action_settings">Sign Out</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="arrival_date">Arrival: </string>
+    <string name="a_not_selected">NO DATE</string>
+    <string name="d_not_selected">NO DATE</string>
+    <string name="departure_date">Departure: </string>
+    <string name="edit_btn">Edit Date</string>
+    <string name="s_arrival_date">Arrival Date: </string>
+    <string name="s_departure_date">Departure: </string>
+    <string name="other_name">Name</string>
+    <string name="o_arrival_date">Arv. Date</string>
+    <string name="o_dept_date">Dept. Date</string>
+    <string name="arrival_select">Select Date</string>
+    <string name="departure_select">Select Date</string>
+    <string name="date_done">Done</string>
+    <string name="welcome_tv">Welcome</string>
+    <string name="tvName">User Name</string>
+    <string name="flight_land">Arrival</string>
+    <string name="flight_take_off">Departure</string>
+    <string name="arrival_icon">arrival icon</string>
+    <string name="icon_departure">Departure</string>
+    <string name="id_Admin">Admin</string>
+    <string name="id_guest">Guest</string>
+</resources>
