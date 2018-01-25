@@ -15,9 +15,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nissan.schedulemanager.admin.AdminLoginActivity;
+import com.example.nissan.schedulemanager.admin.AdminDashBoard;
 import com.example.nissan.schedulemanager.R;
-import com.example.nissan.schedulemanager.guest.GuestLoginActivity;
+import com.example.nissan.schedulemanager.guest.GuestDashBoard;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -52,24 +52,6 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
         mEmailField = findViewById(R.id.email);
         mPasswordField = findViewById(R.id.password);
         mSignInButton = findViewById(R.id.button_sign_in);
-        mAdmin = findViewById(R.id.idAdmin);
-        mGuest = findViewById(R.id.idGuest);
-        // Admin Login Button
-        mAdmin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ExpertLoginActivity.this, AdminLoginActivity.class);
-                startActivity(intent);
-            }
-        });
-        // Guest Login Button
-        mGuest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ExpertLoginActivity.this, GuestLoginActivity.class);
-                startActivity(intent);
-            }
-        });
         //mSignUpButton = findViewById(R.id.button_sign_up);
 
         // Click listeners
@@ -110,7 +92,7 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
                             onAuthSuccess(task.getResult().getUser());
                         } else {
                             AlertBox();
-                            /* Toast.makeText(ExpertLoginActivity.this, "Sign In Failed",
+                             /* Toast.makeText(ExpertLoginActivity.this, "Sign In Failed, Plese check net",
                                     Toast.LENGTH_SHORT).show(); */
                         }
                     }
@@ -147,11 +129,20 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
     private void onAuthSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
 
+        if (username.contains("admin"))
+        {
+            startActivity(new Intent(ExpertLoginActivity.this, AdminDashBoard.class));
+        }
+        else if (username.contains("guest"))
+        {
+            startActivity(new Intent(ExpertLoginActivity.this, GuestDashBoard.class));
+        }
         // Write new user
        // writeNewUser(user.getUid(), username, user.getEmail());
-
-        // Go to MainActivity
-        startActivity(new Intent(ExpertLoginActivity.this, ExpertDashBoard.class));
+        else {
+            // Go to MainActivity
+            startActivity(new Intent(ExpertLoginActivity.this, ExpertDashBoard.class));
+        }
         finish();
     }
 
@@ -165,7 +156,7 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
 
     private boolean validateForm() {
         boolean result = true;
-        if (mEmailField.getText().toString().contains("admin@sm.com") || mEmailField.getText().toString().contains("guest@sm.com")){
+       /* if (mEmailField.getText().toString().contains("admin@sm.com") || mEmailField.getText().toString().contains("guest@sm.com")){
             //Toast.makeText(ExpertLoginActivity.this,"Access Denied",Toast.LENGTH_LONG).show();
             AlertBox();
             mEmailField.setError("Access Denied!");
@@ -173,7 +164,7 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
         }
         else {
             mEmailField.setError(null);
-        }
+        } */
         if (TextUtils.isEmpty(mEmailField.getText().toString())) {
             mEmailField.setError("Required");
             result = false;
@@ -213,8 +204,8 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
     public void AlertBox(){
         //Alert Box
         AlertDialog.Builder builder = new AlertDialog.Builder(ExpertLoginActivity.this, R.style.AlertDialogStyle);
-        builder.setTitle("Access Denied!");
-        builder.setMessage("Please check Email/Password");
+        builder.setTitle("Sign In Failed!");
+        builder.setMessage("Please check Email/Password or Internet connection.");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

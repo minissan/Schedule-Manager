@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'ScheduleManagerKey'
+            keyPassword 'ys2b78habym9'
+            storeFile file('C:/Users/ASUS/OneDrive/Android Apps key/Schedule Manager Key/Schedule Manager.jks')
+            storePassword 'ys2b78habym9'
+        }
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId 'com.example.nissan.schedulemanager'
@@ -14,6 +22,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        d {
+            signingConfig signingConfigs.config
         }
     }
     productFlavors {

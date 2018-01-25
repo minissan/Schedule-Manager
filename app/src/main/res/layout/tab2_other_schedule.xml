@@ -9,12 +9,13 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/expertlist"
         android:layout_width="0dp"
-        android:layout_height="524dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="535dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.RecyclerView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268"></android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
