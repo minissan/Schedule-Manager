@@ -15,10 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
-import com.example.nissan.schedulemanager.expert.DateSelectActivity;
-import com.example.nissan.schedulemanager.expert.ExpertDashBoard;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -66,11 +62,11 @@ public class AdminSingleExpert extends AppCompatActivity {
         setContentView(R.layout.activity_admin_single_expert);
         mexpertIDkey = getIntent().getExtras().getString("expertIDkey");
 
-        mName = findViewById(R.id.l_name);
+        mName = findViewById(R.id.TvName);
         mArrival_Date = findViewById(R.id.l_arrival_date);
         mDeparture_Date = findViewById(R.id.l_departure_date);
-        BtnUpdate = findViewById(R.id.ButtonAdminUpdate);
-        BtnDelete = findViewById(R.id.ButtonAdminDelete);
+       // BtnUpdate = findViewById(R.id.ButtonAdminUpdate);
+       // BtnDelete = findViewById(R.id.ButtonAdminDelete);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("nk_bsmia").child("user").child("i_expert");
         //Toast.makeText(AdminSingleExpert.this, mexpertIDkey,Toast.LENGTH_LONG).show();
@@ -86,8 +82,8 @@ public class AdminSingleExpert extends AppCompatActivity {
                     departure_date = (String) dataSnapshot.child("departure_date").getValue();
 
                   mName.setText(name);
-                //mArrival_Date.setText(arrival_date);
-                //mDeparture_Date.setText(departure_date);
+                  mArrival_Date.setText(arrival_date);
+                  mDeparture_Date.setText(departure_date);
             }
 
             @Override
@@ -180,7 +176,7 @@ public class AdminSingleExpert extends AppCompatActivity {
                             mDatabase.child(mexpertIDkey).child("arrival_date").setValue(arrival_date);
                             mDatabase.child(mexpertIDkey).child("departure_date").setValue(departure_date);
                             Toast.makeText(getApplicationContext(), "Date Updated Successfully.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(AdminSingleExpert.this,AdminDashBoard.class);
+                            Intent intent = new Intent(AdminSingleExpert.this,AdminExpertList.class);
                             startActivity(intent);
                         }
 
@@ -220,7 +216,7 @@ public class AdminSingleExpert extends AppCompatActivity {
                         mDatabase.child(mexpertIDkey).child("arrival_date").setValue("NO DATE");
                         mDatabase.child(mexpertIDkey).child("departure_date").setValue("NO DATE");
                         Toast.makeText(getApplicationContext(), "Date Deleted Successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(AdminSingleExpert.this,AdminDashBoard.class);
+                        Intent intent = new Intent(AdminSingleExpert.this,AdminExpertList.class);
                         startActivity(intent);
                     }
                 });

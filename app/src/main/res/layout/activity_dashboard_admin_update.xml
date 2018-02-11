@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nissan.schedulemanager.admin.DashboardAdminUpdate">
+
+    <TextView
+        android:id="@+id/tvDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="Dashboard"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="70dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="NAME:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvCurrLocation"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvName"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="Curr. Loc.:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvArrival"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvCurrLocation"
+        android:layout_below="@+id/tvCurrLocation"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="ARRIVAL:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvDeparture"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvArrival"
+        android:layout_below="@+id/tvArrival"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="DEPARTURE:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvEstmStay"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDeparture"
+        android:layout_below="@+id/tvDeparture"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="Estm. Stay:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_marginLeft="1dp"
+        android:layout_toEndOf="@+id/tvName"
+        android:padding="5dp"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvArrival"
+        android:layout_alignStart="@+id/name"
+        android:layout_alignTop="@+id/tvCurrLocation"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCurrLocation"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvArrival"
+        android:padding="5dp"
+        android:text="Arrival" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvArrival"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvArrival"
+        android:padding="5dp"
+        android:text="Departure" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvEstmStay"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_alignTop="@+id/tvEstmStay"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/btn_confirm"
+        android:drawableLeft="@mipmap/ic_check_circle_white_24dp"
+        android:padding="3dp"
+        android:text="Confirm"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText4"
+        android:layout_toEndOf="@+id/editText4"
+        android:padding="5dp"
+        android:text="days"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

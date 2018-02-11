@@ -15,8 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
-import com.example.nissan.schedulemanager.admin.AdminDashBoard;
-import com.example.nissan.schedulemanager.admin.AdminSingleExpert;
 import com.example.nissan.schedulemanager.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -110,7 +108,7 @@ public class Tab1MySchedule extends Fragment {
                         myRef.child("i_expert").child(userID).child("arrival_date").setValue("NO DATE");
                         myRef.child("i_expert").child(userID).child("departure_date").setValue("NO DATE");
                         Toast.makeText(getContext(), "Date Deleted Successfully.", Toast.LENGTH_SHORT).show();
-                        //Intent intent = new Intent(Tab1MySchedule.this,AdminDashBoard.class);
+                        //Intent intent = new Intent(Tab1MySchedule.this,AdminDashBoardOld.class);
                         //startActivity(intent);
                     }
                 });

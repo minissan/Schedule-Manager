@@ -12,11 +12,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
 import com.example.nissan.schedulemanager.expert.BaseActivity;
-import com.example.nissan.schedulemanager.expert.ExpertLoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -128,7 +126,7 @@ public class AdminLoginActivity extends BaseActivity implements View.OnClickList
         // writeNewUser(user.getUid(), username, user.getEmail());
 
         // Go to MainActivity
-        startActivity(new Intent(AdminLoginActivity.this, AdminDashBoard.class));
+        startActivity(new Intent(AdminLoginActivity.this, AdminExpertList.class));
         finish();
     }
 

@@ -13,9 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.nissan.schedulemanager.admin.AdminDashBoard;
+import com.example.nissan.schedulemanager.admin.AdminExpertList;
 import com.example.nissan.schedulemanager.R;
 import com.example.nissan.schedulemanager.guest.GuestDashBoard;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -131,7 +130,7 @@ public class ExpertLoginActivity extends BaseActivity implements View.OnClickLis
 
         if (username.contains("admin"))
         {
-            startActivity(new Intent(ExpertLoginActivity.this, AdminDashBoard.class));
+            startActivity(new Intent(ExpertLoginActivity.this, AdminExpertList.class));
         }
         else if (username.contains("guest"))
         {

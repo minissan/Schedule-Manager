@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_dashboard"
+        android:enabled="true"
+        android:icon="@mipmap/ic_dashboard_black_24dp"
+        android:title="Dashboard"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_flight"
+        android:enabled="true"
+        android:icon="@mipmap/ic_flight_black_24dp"
+        android:title="Flight Info."
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_hotel"
+        android:enabled="true"
+        android:icon="@mipmap/ic_hotel_black_24dp"
+        android:title="Hotel info."
+        app:showAsAction="ifRoom"/>
+</menu>

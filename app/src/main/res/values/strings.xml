@@ -39,4 +39,8 @@
     <string name="icon_departure">Departure</string>
     <string name="id_Admin">Admin</string>
     <string name="id_guest">Guest</string>
+    <string name="title_activity_admin_single_expert">AdminSingleExpertActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_flight_info">Flight Info.</string>
+    <string name="title_hotel_info">Hotel Info.</string>
 </resources>

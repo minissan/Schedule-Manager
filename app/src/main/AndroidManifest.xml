@@ -30,21 +30,26 @@
         <activity android:name=".expert.DateSelectActivity" />
         <activity android:name=".admin.AdminLoginActivity" />
         <activity android:name=".guest.GuestLoginActivity" />
+        <activity android:name=".admin.AdminDashBoard" />
         <activity
-            android:name=".admin.AdminDashBoard"
+            android:name=".admin.AdminExpertList"
             android:label="Dash Board"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".guest.GuestDashBoard"
+        <activity
+            android:name=".guest.GuestDashBoard"
             android:label="Dash Board"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.example.nissan.schedulemanager.expert.ExpertLoginActivity" />
 
         <activity android:name=".admin.AdminSingleExpert" />
-
+        <activity
+            android:name=".AdminSingleExpertActivity"
+            android:label="@string/title_activity_admin_single_expert" />
+        <activity android:name=".admin.DashboardAdminUpdate" />
+        <activity android:name=".admin.FlightAdminUpdate"></activity>
     </application>
 
 </manifest>

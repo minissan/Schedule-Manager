@@ -1,4 +1,4 @@
-package com.example.nissan.schedulemanager.guest;
+package com.example.nissan.schedulemanager.admin;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class GuestDashBoard extends BaseActivity {
+public class AdminExpertList extends BaseActivity {
     private static final String TAG = "ViewDatabase";
 
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -90,7 +90,7 @@ public class GuestDashBoard extends BaseActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(GuestDashBoard.this, ExpertLoginActivity.class));
+            startActivity(new Intent(AdminExpertList.this, ExpertLoginActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -108,40 +108,39 @@ public class GuestDashBoard extends BaseActivity {
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
-        FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder>(
+            FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder>(
 
-                ExpertList.class,
-                R.layout.expert_row_admin,
-                GuestDashBoard.ExpertViewHolder.class,
-                mDatabase
-        ) {
-            @Override
-            protected void populateViewHolder(ExpertViewHolder viewHolder, ExpertList model, int position) {
+                    ExpertList.class,
+                    R.layout.expert_row_admin,
+                    AdminExpertList.ExpertViewHolder.class,
+                    mDatabase
+            ) {
+                @Override
+                protected void populateViewHolder(ExpertViewHolder viewHolder, ExpertList model, int position) {
 
-                final String expertIDkey = getRef(position).getKey();
+                    final String expertIDkey = getRef(position).getKey();
 
-                viewHolder.setName(model.getName());
-                viewHolder.setArrivalDate(model.getArrival_date());
-                viewHolder.setDepartureDate(model.getDeparture_date());
+                    viewHolder.setName(model.getName());
+                    viewHolder.setArrivalDate(model.getArrival_date());
+                    viewHolder.setDepartureDate(model.getDeparture_date());
 
-                //Click on profile
-              /*  viewHolder.mView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //Toast.makeText(AdminExpertList.this, expertIDkey, Toast.LENGTH_LONG).show();
-                        Intent singleExpertIntent = new Intent(GuestDashBoard.this, AdminSingleExpert.class);
-                        singleExpertIntent.putExtra("expertIDkey", expertIDkey);
-                        startActivity(singleExpertIntent);
-                    }
-                }); */
-            }
-        };
+                    //Click on profile
+                    viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //Toast.makeText(AdminExpertList.this, expertIDkey, Toast.LENGTH_LONG).show();
+                            Intent singleExpertIntent = new Intent(AdminExpertList.this, AdminDashBoard.class);
+                            singleExpertIntent.putExtra("expertIDkey", expertIDkey);
+                            startActivity(singleExpertIntent);
+                        }
+                    });
+                }
+            };
 
-        mExpertList.setAdapter(firebaseRecyclerAdapter);
+            mExpertList.setAdapter(firebaseRecyclerAdapter);
 
     }
     public static class ExpertViewHolder extends RecyclerView.ViewHolder{
-
         View mView;
 
         public ExpertViewHolder(View itemView) {
@@ -167,6 +166,7 @@ public class GuestDashBoard extends BaseActivity {
             TextView ldeparture_date = (TextView)itemView.findViewById(R.id.l_departure_date);
             ldeparture_date.setText(departureDate);
         }
+
     }
 
     @Override

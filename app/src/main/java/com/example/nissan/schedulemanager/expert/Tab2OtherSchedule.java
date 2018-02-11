@@ -73,7 +73,7 @@ public class Tab2OtherSchedule extends Fragment {
 
         public void setName(String name){
 
-            TextView lname = (TextView)itemView.findViewById(R.id.l_name);
+            TextView lname = (TextView)itemView.findViewById(R.id.TvName);
             lname.setText(name);
         }
 

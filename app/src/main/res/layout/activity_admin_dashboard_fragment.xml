@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nissan.schedulemanager.admin.fragments.AdminDashboardFragment">
+
+    <TextView
+        android:id="@+id/tvDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="@string/title_dashboard"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="70dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="NAME:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvCurrLocation"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvName"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="Curr. Loc.:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvArrival"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvCurrLocation"
+        android:layout_below="@+id/tvCurrLocation"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="ARRIVAL:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvDeparture"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvArrival"
+        android:layout_below="@+id/tvArrival"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="DEPARTURE:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvEstmStay"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDeparture"
+        android:layout_below="@+id/tvDeparture"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:text="Estm. Stay:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_marginLeft="1dp"
+        android:layout_toEndOf="@+id/tvName"
+        android:padding="5dp"
+        android:text="Expert Name"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvCurrLocation"
+        android:layout_alignBottom="@+id/tvCurrLocation"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvCurrLocation"
+        android:padding="5dp"
+        android:text="Current Location"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCurrLocation"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvCurrLocation"
+        android:padding="5dp"
+        android:text="Arrival Date"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvArrival"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvDeparture"
+        android:padding="5dp"
+        android:text="Departure Date"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView19"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/tvEstmStay"
+        android:padding="5dp"
+        android:text="Estimate Date"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnDeleteDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/btn_delete"
+        android:drawableLeft="@mipmap/ic_delete_white_24dp"
+        android:padding="5dp"
+        android:text="delete"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnUpdateDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnDeleteDash"
+        android:layout_alignBottom="@+id/btnDeleteDash"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/btnDeleteDash"
+        android:background="@drawable/btn_update"
+        android:drawableLeft="@mipmap/ic_update_white_24dp"
+        android:padding="5dp"
+        android:text="@string/common_google_play_services_update_button"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+</RelativeLayout>

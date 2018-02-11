@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#fc1f02</color>
-    <color name="colorPrimaryDark">#ab000d</color>
+    <color name="colorPrimaryDark">#d41c1c</color>
     <color name="colorAccent">#f8e22538</color>
     <color name="tab_selected_text_color">#ffffff</color>
     <color name="tab_unselected_text_color">#ffffff</color>
+    <color name="arr_flight_no">#0caa85</color>
+
+    <color name="tab_disable">#979797</color>
+    <color name="tab_enable">#FFFFFF</color>
+    <color name="tab_checked">#91ff82</color>
+    <color name="tab_unchecked">#FFFFFF</color>
 </resources>
