@@ -131,17 +131,17 @@ public class Tab1MySchedule extends Fragment {
         for (DataSnapshot ds : dataSnapshot.getChildren()){
             User user = new User();
             user.setName(ds.child(userID).getValue(User.class).getName());
-            user.setArrival_date(ds.child(userID).getValue(User.class).getArrival_date());
-            user.setDeparture_date(ds.child(userID).getValue(User.class).getDeparture_date());
+            user.setArrival(ds.child(userID).getValue(User.class).getArrival());
+            user.setDeparture(ds.child(userID).getValue(User.class).getDeparture());
 
             //display all the information
             Log.d(TAG, "showData: Name: " +user.getName());
-            Log.d(TAG, "showData: Arrival Date: " +user.getArrival_date());
-            Log.d(TAG, "showData: Departure Date: " +user.getDeparture_date());
+            Log.d(TAG, "showData: Arrival Date: " +user.getArrival());
+            Log.d(TAG, "showData: Departure Date: " +user.getDeparture());
 
             name.setText(user.getName());
-            arrival_date.setText(user.getArrival_date());
-            departure_date.setText(user.getDeparture_date());
+            arrival_date.setText(user.getArrival());
+            departure_date.setText(user.getDeparture());
         }
     }
 

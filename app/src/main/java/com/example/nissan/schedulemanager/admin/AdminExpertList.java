@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.nissan.schedulemanager.R;
+import com.example.nissan.schedulemanager.admin.fragments.AdminDashboardFragment;
 import com.example.nissan.schedulemanager.expert.BaseActivity;
 import com.example.nissan.schedulemanager.expert.ExpertLoginActivity;
 import com.example.nissan.schedulemanager.models.ExpertList;
@@ -32,7 +33,7 @@ public class AdminExpertList extends BaseActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseAuth mAuth;
     private RecyclerView mExpertList;
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("nk_bsmia").child("user").child("i_expert");
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("user");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,8 +122,8 @@ public class AdminExpertList extends BaseActivity {
                     final String expertIDkey = getRef(position).getKey();
 
                     viewHolder.setName(model.getName());
-                    viewHolder.setArrivalDate(model.getArrival_date());
-                    viewHolder.setDepartureDate(model.getDeparture_date());
+                    viewHolder.setArrivalDate(model.getArrival());
+                    viewHolder.setDepartureDate(model.getDeparture());
 
                     //Click on profile
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {

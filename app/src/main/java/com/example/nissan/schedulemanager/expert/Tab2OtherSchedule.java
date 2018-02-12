@@ -51,8 +51,8 @@ public class Tab2OtherSchedule extends Fragment {
             protected void populateViewHolder(ExpertViewHolder viewHolder, ExpertList model, int position) {
 
                 viewHolder.setName(model.getName());
-                viewHolder.setArrivalDate(model.getArrival_date());
-                viewHolder.setDepartureDate(model.getDeparture_date());
+                viewHolder.setArrivalDate(model.getArrival());
+                viewHolder.setDepartureDate(model.getDeparture());
 
             }
         };

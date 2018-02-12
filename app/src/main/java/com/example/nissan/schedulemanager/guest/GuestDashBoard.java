@@ -121,8 +121,8 @@ public class GuestDashBoard extends BaseActivity {
                 final String expertIDkey = getRef(position).getKey();
 
                 viewHolder.setName(model.getName());
-                viewHolder.setArrivalDate(model.getArrival_date());
-                viewHolder.setDepartureDate(model.getDeparture_date());
+                viewHolder.setArrivalDate(model.getArrival());
+                viewHolder.setDepartureDate(model.getDeparture());
 
                 //Click on profile
               /*  viewHolder.mView.setOnClickListener(new View.OnClickListener() {

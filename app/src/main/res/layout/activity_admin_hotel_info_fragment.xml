@@ -95,7 +95,7 @@
         android:textColor="@android:color/black" />
 
     <Button
-        android:id="@+id/btnDeleteDash"
+        android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -114,10 +114,10 @@
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnDeleteDash"
-        android:layout_alignBottom="@+id/btnDeleteDash"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
         android:layout_marginLeft="5dp"
-        android:layout_toEndOf="@+id/btnDeleteDash"
+        android:layout_toEndOf="@+id/btnDelete"
         android:background="@drawable/btn_update"
         android:drawableLeft="@mipmap/ic_update_white_24dp"
         android:padding="5dp"

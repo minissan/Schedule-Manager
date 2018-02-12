@@ -81,7 +81,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/origin_airport_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/tvOriginAirport"
@@ -92,7 +92,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/origin_flight_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tvFlightNo"
@@ -105,7 +105,7 @@
             tools:text="Flight No." />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/origin_flight_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvFlightNo"
@@ -171,7 +171,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/transit_airport_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/tvAirportTransit"
@@ -182,7 +182,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/transit_flight_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tvFlightNoTransit"
@@ -194,7 +194,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/transit_flight_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvFlightNoTransit"
@@ -246,7 +246,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/arrival_airport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/tvArrivalAirport"
@@ -257,7 +257,7 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/arrival_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvArrivalAirport"
@@ -269,7 +269,7 @@
             android:textColor="@android:color/black" />
 
         <Button
-            android:id="@+id/btnDeleteDash"
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -288,10 +288,10 @@
             android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/btnDeleteDash"
-            android:layout_alignBottom="@+id/btnDeleteDash"
+            android:layout_alignBaseline="@+id/btnDelete"
+            android:layout_alignBottom="@+id/btnDelete"
             android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@+id/btnDeleteDash"
+            android:layout_toEndOf="@+id/btnDelete"
             android:background="@drawable/btn_update"
             android:drawableLeft="@mipmap/ic_update_white_24dp"
             android:padding="5dp"

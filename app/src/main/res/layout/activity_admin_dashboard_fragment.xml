@@ -89,7 +89,7 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/ExpertName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/tvName"
@@ -97,10 +97,11 @@
         android:layout_toEndOf="@+id/tvName"
         android:padding="5dp"
         android:text="Expert Name"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/CurrentLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvCurrLocation"
@@ -113,7 +114,7 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/ArrivalDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvCurrLocation"
@@ -125,7 +126,7 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/DepartureDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvArrival"
@@ -137,19 +138,19 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/EstimateStay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView19"
+        android:layout_below="@+id/DepartureDate"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/tvEstmStay"
         android:padding="5dp"
-        android:text="Estimate Date"
+        android:text="Estimate Stay"
         android:textColor="@android:color/black" />
 
     <Button
-        android:id="@+id/btnDeleteDash"
+        android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -165,13 +166,13 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnUpdateDash"
+        android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnDeleteDash"
-        android:layout_alignBottom="@+id/btnDeleteDash"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
         android:layout_marginLeft="5dp"
-        android:layout_toEndOf="@+id/btnDeleteDash"
+        android:layout_toEndOf="@+id/btnDelete"
         android:background="@drawable/btn_update"
         android:drawableLeft="@mipmap/ic_update_white_24dp"
         android:padding="5dp"
