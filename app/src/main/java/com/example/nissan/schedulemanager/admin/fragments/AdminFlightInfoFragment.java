@@ -1,5 +1,7 @@
 package com.example.nissan.schedulemanager.admin.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
 import com.example.nissan.schedulemanager.admin.FlightAdminUpdate;
@@ -68,6 +71,39 @@ public class AdminFlightInfoFragment extends Fragment {
               startActivity(intent);
           }
       });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle);
+                builder.setTitle("Confirm Delete");
+                builder.setMessage("Are you sure you want to DELETE data?");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mDatabase.child(mexpertIDkey).child("origin_airport").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("origin_flight_no").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("origin_flight_time").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("transit_airport").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("transit_flight_no").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("transit_flight_time").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("arrival_airport").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("arrival_time").setValue("Not Available");
+                        Toast.makeText(getContext(), "Data Deleted Successfully.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
+
+            }
+        });
+
 
         mDatabase.child(mexpertIDkey).addValueEventListener(new ValueEventListener() {
             @Override

@@ -219,7 +219,7 @@
                 android:inputType="time"
                 android:padding="5dp"
                 android:text="Flight Time"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
@@ -267,7 +267,7 @@
                 android:inputType="time"
                 android:padding="5dp"
                 android:text="Flight Time"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
@@ -299,41 +299,23 @@
                 android:inputType="time"
                 android:padding="5dp"
                 android:text="Flight Time"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btnDelete"
+                android:id="@+id/btnConfirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tvArrivalTime"
-                android:layout_marginLeft="110dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/btn_delete"
-                android:drawableLeft="@mipmap/ic_delete_white_24dp"
+                android:layout_below="@+id/arrival_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_confirm"
+                android:drawableLeft="@mipmap/ic_check_circle_white_24dp"
                 android:padding="5dp"
-                android:text="delete"
+                android:text="Confirm"
                 android:textAlignment="textStart"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnUpdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/btnDelete"
-                android:layout_alignBottom="@+id/btnDelete"
-                android:layout_marginLeft="5dp"
-                android:layout_toEndOf="@+id/btnDelete"
-                android:background="@drawable/btn_update"
-                android:drawableLeft="@mipmap/ic_update_white_24dp"
-                android:padding="5dp"
-                android:text="@string/common_google_play_services_update_button"
-                android:textAlignment="textStart"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white" />
 
         </RelativeLayout>
     </ScrollView>
