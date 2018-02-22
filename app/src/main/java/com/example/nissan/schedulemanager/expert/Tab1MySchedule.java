@@ -99,7 +99,7 @@ public class Tab1MySchedule extends Fragment {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle);
                 builder.setTitle("Confirm Delete");
-                builder.setMessage("Are you sure to DELETE date?");
+                builder.setMessage("Are you sure you want to DELETE date?");
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

@@ -11,4 +11,8 @@
     <color name="tab_enable">#FFFFFF</color>
     <color name="tab_checked">#91ff82</color>
     <color name="tab_unchecked">#FFFFFF</color>
+    <color name="origin">#ff4500</color>
+    <color name="transit">#4682b4</color>
+    <color name="arrival">#9acd32</color>
+    <color name="flight_info">#4b0082</color>
 </resources>

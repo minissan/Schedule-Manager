@@ -21,7 +21,7 @@
             android:padding="5dp"
             android:text="Flight Information"
             android:textAllCaps="true"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/flight_info"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -37,8 +37,9 @@
             android:padding="5dp"
             android:text="Origin"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:textColor="@color/origin"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvOriginAirport"
@@ -114,7 +115,7 @@
             android:layout_toEndOf="@+id/tvFlightNo"
             android:padding="5dp"
             android:text="Flight Time"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/origin" />
 
         <TextView
             android:id="@+id/tvTansitInfo"
@@ -128,8 +129,9 @@
             android:padding="5dp"
             android:text="Transit"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:textColor="@color/transit"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvAirportTransit"
@@ -203,7 +205,7 @@
             android:layout_toEndOf="@+id/tvFlightNoTransit"
             android:padding="5dp"
             android:text="Flight Time"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/transit" />
 
         <TextView
             android:id="@+id/tvArrival"
@@ -217,8 +219,9 @@
             android:padding="5dp"
             android:text="Arrival"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:textColor="@color/arrival"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvArrivalAirport"
@@ -266,7 +269,7 @@
             android:layout_toEndOf="@+id/tvArrivalAirport"
             android:padding="5dp"
             android:text="Arrival Time"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/arrival" />
 
         <Button
             android:id="@+id/btnDelete"

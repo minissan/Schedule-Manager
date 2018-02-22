@@ -1,5 +1,7 @@
 package com.example.nissan.schedulemanager.admin.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -9,8 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
+import com.example.nissan.schedulemanager.admin.AdminDashBoard;
+import com.example.nissan.schedulemanager.admin.AdminExpertList;
 import com.example.nissan.schedulemanager.admin.DashboardAdminUpdate;
 import com.example.nissan.schedulemanager.models.User;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +39,7 @@ public class AdminDashboardFragment extends Fragment {
     private TextView curr_loc;
     private TextView estm_stay;
     private Button btnUpdate;
+    private Button btnDelete;
     private DatabaseReference mDatabase;
 
     @Override
@@ -42,7 +48,8 @@ public class AdminDashboardFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_admin_dashboard_fragment, container, false);
 
-        btnUpdate = view.findViewById(R.id.btnUpdateDash);
+        btnUpdate = view.findViewById(R.id.btnUpdate);
+        btnDelete = view.findViewById(R.id.btnDelete);
         name = view.findViewById(R.id.ExpertName);
         arrival = view.findViewById(R.id.ArrivalDate);
         departure = view.findViewById(R.id.DepartureDate);
@@ -51,13 +58,42 @@ public class AdminDashboardFragment extends Fragment {
 
         mexpertIDkey = getActivity().getIntent().getExtras().getString("expertIDkey");
         mDatabase = FirebaseDatabase.getInstance().getReference().child("user");
-        //name.setText(mexpertIDkey);
+
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),DashboardAdminUpdate.class);
+                Intent intent = new Intent(getContext(), DashboardAdminUpdate.class);
+                intent.putExtra("expertIDkey", mexpertIDkey);
                 startActivity(intent);
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle);
+                builder.setTitle("Confirm Delete");
+                builder.setMessage("Are you sure you want to DELETE data?");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mDatabase.child(mexpertIDkey).child("curr_loc").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("arrival").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("departure").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("estm_stay").setValue("0");
+                        Toast.makeText(getContext(), "Data Deleted Successfully.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
+
             }
         });
 
