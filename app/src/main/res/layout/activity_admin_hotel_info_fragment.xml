@@ -24,7 +24,7 @@
 
     <TextView
         android:id="@+id/tvHotelName"
-        android:layout_width="89dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -32,13 +32,14 @@
         android:layout_marginTop="62dp"
         android:background="@android:color/darker_gray"
         android:padding="5dp"
-        android:text="Hotel Name:"
+        android:text="Hotel: "
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/tvCheckIn"
-        android:layout_width="89dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvHotelName"
         android:layout_below="@+id/tvHotelName"
@@ -51,7 +52,7 @@
 
     <TextView
         android:id="@+id/tvCheckOut"
-        android:layout_width="89dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvCheckIn"
         android:layout_below="@+id/tvCheckIn"
@@ -81,7 +82,7 @@
         android:layout_alignTop="@+id/tvCheckIn"
         android:padding="5dp"
         android:text="Check-In"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/holo_green_light" />
 
     <TextView
         android:id="@+id/hotel_check_out"
@@ -92,7 +93,7 @@
         android:layout_toEndOf="@+id/tvCheckOut"
         android:padding="5dp"
         android:text="Check-Out"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/holo_blue_light" />
 
     <Button
         android:id="@+id/btnDelete"

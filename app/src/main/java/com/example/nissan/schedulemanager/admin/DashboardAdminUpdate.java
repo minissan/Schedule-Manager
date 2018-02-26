@@ -1,5 +1,5 @@
 package com.example.nissan.schedulemanager.admin;
-
+// Created by Nissan
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -160,7 +160,7 @@ public class DashboardAdminUpdate extends AppCompatActivity {
                 mDatabase.child(mexpertIDkey).child("arrival").setValue(farrival);
                 mDatabase.child(mexpertIDkey).child("departure").setValue(fdeparture);
                 mDatabase.child(mexpertIDkey).child("curr_loc").setValue(fcurr_loc);
-                mDatabase.child(mexpertIDkey).child("estm_stay").setValue(festm_stay);
+                mDatabase.child(mexpertIDkey).child("estm_stay").setValue(festm_stay+" days");
 
                 AlertBox();
             }

@@ -22,7 +22,15 @@ public class ExpertList {
     private String transit_airport;
     private String transit_flight_no;
     private String transit_flight_time;
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
     /*public ExpertList(){
 
     }

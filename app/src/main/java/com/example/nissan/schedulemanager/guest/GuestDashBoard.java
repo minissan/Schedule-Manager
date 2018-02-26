@@ -111,7 +111,7 @@ public class GuestDashBoard extends BaseActivity {
         FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<ExpertList, ExpertViewHolder>(
 
                 ExpertList.class,
-                R.layout.expert_row_admin,
+                R.layout.expert_row_admin_old,
                 GuestDashBoard.ExpertViewHolder.class,
                 mDatabase
         ) {

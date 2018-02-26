@@ -44,13 +44,9 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.example.nissan.schedulemanager.expert.ExpertLoginActivity" />
 
-        <activity android:name=".admin.AdminSingleExpert" />
-        <activity
-            android:name=".AdminSingleExpertActivity"
-            android:label="@string/title_activity_admin_single_expert" />
         <activity android:name=".admin.DashboardAdminUpdate" />
         <activity android:name=".admin.FlightAdminUpdate" />
-        <activity android:name=".admin.HotelAdminUpdate"></activity>
+        <activity android:name=".admin.HotelAdminUpdate" />
     </application>
 
 </manifest>

@@ -23,8 +23,8 @@
         tools:layout_editor_absoluteY="1dp" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="89dp"
+        android:id="@+id/tvHotelName"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -32,29 +32,29 @@
         android:layout_marginTop="62dp"
         android:background="@android:color/darker_gray"
         android:padding="5dp"
-        android:text="Hotel Name: "
+        android:text="Hotel :"
         android:textAlignment="center"
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="89dp"
+        android:id="@+id/tvCheckIn"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView6"
-        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/tvHotelName"
+        android:layout_below="@+id/tvHotelName"
         android:layout_marginTop="2dp"
         android:background="@android:color/darker_gray"
         android:padding="5dp"
+        android:text="Check-In:"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        tools:text="Check-In: " />
+        android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="89dp"
+        android:id="@+id/tvCheckOut"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView9"
-        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/tvCheckIn"
+        android:layout_below="@+id/tvCheckIn"
         android:layout_marginTop="2dp"
         android:background="@android:color/darker_gray"
         android:padding="5dp"
@@ -63,38 +63,59 @@
         android:textColor="@android:color/black" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/hotel_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView9"
+        android:layout_above="@+id/tvCheckIn"
         android:layout_marginLeft="1dp"
-        android:layout_toEndOf="@+id/textView6"
+        android:layout_toEndOf="@+id/tvHotelName"
         android:ems="10"
         android:hint="Hotel Name"
         android:inputType="textPersonName"
         android:padding="5dp"
+        android:textColor="@android:color/black"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:id="@+id/check_in"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
+        android:layout_below="@+id/tvHotelName"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/textView6"
+        android:layout_toEndOf="@+id/tvHotelName"
+        android:background="@android:color/holo_green_light"
         android:padding="5dp"
-        android:text="TextView" />
+        android:text="Check-In"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:id="@+id/check_out"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
+        android:layout_below="@+id/tvCheckIn"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/textView9"
+        android:layout_toEndOf="@+id/tvCheckIn"
+        android:background="@android:color/holo_blue_light"
         android:padding="5dp"
-        android:text="TextView" />
+        android:text="Check-Out"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/btn_confirm"
+        android:drawableLeft="@mipmap/ic_check_circle_white_24dp"
+        android:padding="5dp"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </RelativeLayout>

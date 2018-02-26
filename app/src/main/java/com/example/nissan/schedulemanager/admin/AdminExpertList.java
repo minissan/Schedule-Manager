@@ -1,5 +1,6 @@
 package com.example.nissan.schedulemanager.admin;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
@@ -14,10 +15,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nissan.schedulemanager.R;
-import com.example.nissan.schedulemanager.admin.fragments.AdminDashboardFragment;
 import com.example.nissan.schedulemanager.expert.BaseActivity;
 import com.example.nissan.schedulemanager.expert.ExpertLoginActivity;
 import com.example.nissan.schedulemanager.models.ExpertList;
@@ -26,6 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class AdminExpertList extends BaseActivity {
     private static final String TAG = "ViewDatabase";
@@ -122,8 +124,9 @@ public class AdminExpertList extends BaseActivity {
                     final String expertIDkey = getRef(position).getKey();
 
                     viewHolder.setName(model.getName());
-                    viewHolder.setArrivalDate(model.getArrival());
-                    viewHolder.setDepartureDate(model.getDeparture());
+                    viewHolder.setImage(getApplicationContext(),model.getImage());
+                    //viewHolder.setArrivalDate(model.getArrival());
+                    //viewHolder.setDepartureDate(model.getDeparture());
 
                     //Click on profile
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
@@ -152,11 +155,11 @@ public class AdminExpertList extends BaseActivity {
 
         public void setName(String name){
 
-            TextView lname = (TextView)itemView.findViewById(R.id.TvName);
+            TextView lname = mView.findViewById(R.id.TvName);
             lname.setText(name);
         }
 
-        public void setArrivalDate(String arrival_date){
+   /*     public void setArrivalDate(String arrival_date){
 
             TextView larrival_date = (TextView)itemView.findViewById(R.id.l_arrival_date);
             larrival_date.setText(arrival_date);
@@ -166,8 +169,11 @@ public class AdminExpertList extends BaseActivity {
 
             TextView ldeparture_date = (TextView)itemView.findViewById(R.id.l_departure_date);
             ldeparture_date.setText(departureDate);
+        } */
+        public void setImage(Context ctx, String image){
+            ImageView profile_image = mView.findViewById(R.id.profile_img);
+            Picasso.with(ctx).load(image).into(profile_image);
         }
-
     }
 
     @Override

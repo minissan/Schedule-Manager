@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="92dp"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -36,7 +36,7 @@
 
     <TextView
         android:id="@+id/tvCurrLocation"
-        android:layout_width="92dp"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvName"
         android:layout_below="@+id/tvName"
@@ -50,7 +50,7 @@
 
     <TextView
         android:id="@+id/tvArrival"
-        android:layout_width="92dp"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvCurrLocation"
         android:layout_below="@+id/tvCurrLocation"
@@ -63,7 +63,7 @@
 
     <TextView
         android:id="@+id/tvDeparture"
-        android:layout_width="92dp"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvArrival"
         android:layout_below="@+id/tvArrival"
@@ -76,7 +76,7 @@
 
     <TextView
         android:id="@+id/tvEstmStay"
-        android:layout_width="92dp"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvDeparture"
         android:layout_below="@+id/tvDeparture"
@@ -123,7 +123,7 @@
         android:layout_toEndOf="@+id/tvCurrLocation"
         android:padding="5dp"
         android:text="Arrival Date"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/holo_green_dark" />
 
     <TextView
         android:id="@+id/DepartureDate"
@@ -135,7 +135,7 @@
         android:layout_toEndOf="@+id/tvDeparture"
         android:padding="5dp"
         android:text="Departure Date"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/holo_blue_dark" />
 
     <TextView
         android:id="@+id/EstimateStay"

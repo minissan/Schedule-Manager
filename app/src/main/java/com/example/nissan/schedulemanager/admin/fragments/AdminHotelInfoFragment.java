@@ -1,5 +1,7 @@
 package com.example.nissan.schedulemanager.admin.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -9,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.nissan.schedulemanager.R;
 import com.example.nissan.schedulemanager.admin.FlightAdminUpdate;
+import com.example.nissan.schedulemanager.admin.HotelAdminUpdate;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -56,9 +60,9 @@ public class AdminHotelInfoFragment extends Fragment {
         mDatabase.child(mexpertIDkey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String Shotel_name = (String) dataSnapshot.child("origin_airport").getValue();
-                String Shotel_check_in = (String) dataSnapshot.child("origin_flight_no").getValue();
-                String Shotel_check_out = (String) dataSnapshot.child("origin_flight_time").getValue();
+                String Shotel_name = (String) dataSnapshot.child("hotel_name").getValue();
+                String Shotel_check_in = (String) dataSnapshot.child("check_in").getValue();
+                String Shotel_check_out = (String) dataSnapshot.child("check_out").getValue();
 
                 hotel_name.setText(Shotel_name);
                 hotel_check_in.setText(Shotel_check_in);
@@ -72,6 +76,41 @@ public class AdminHotelInfoFragment extends Fragment {
             }
         });
 
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), HotelAdminUpdate.class);
+                intent.putExtra("expertIDkey", mexpertIDkey);
+                startActivity(intent);
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle);
+                builder.setTitle("Confirm Delete");
+                builder.setMessage("Are you sure you want to DELETE data?");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mDatabase.child(mexpertIDkey).child("hotel_name").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("check_in").setValue("Not Available");
+                        mDatabase.child(mexpertIDkey).child("check_out").setValue("Not Available");
+                        Toast.makeText(getContext(), "Data Deleted Successfully.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
+
+            }
+        });
 
         return view;
     }
