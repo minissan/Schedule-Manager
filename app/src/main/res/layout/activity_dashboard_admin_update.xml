@@ -16,7 +16,7 @@
         android:padding="5dp"
         android:text="Dashboard"
         android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -98,8 +98,9 @@
         android:ems="8"
         android:hint="Name"
         android:maxLength="16"
-        android:padding="5dp"
-        android:textSize="14sp" />
+        android:padding="4dp"
+        android:textColor="@color/expert_name"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/curr_loc"
@@ -111,11 +112,11 @@
         android:ems="8"
         android:hint="Location"
         android:inputType="textPersonName"
-        android:padding="5dp"
+        android:maxLength="16"
+        android:padding="4dp"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:maxLength="16"/>
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/arrival"
@@ -126,10 +127,11 @@
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/tvArrival"
         android:background="@android:color/holo_green_dark"
-        android:padding="5dp"
+        android:padding="4dp"
         android:text="Arrival"
         android:textAlignment="center"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/departure"
@@ -140,10 +142,11 @@
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/tvArrival"
         android:background="@android:color/holo_blue_dark"
-        android:padding="5dp"
+        android:padding="4dp"
         android:text="Departure"
         android:textAlignment="center"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/estm_stay"
@@ -152,10 +155,11 @@
         android:layout_alignBottom="@+id/tvEstmStay"
         android:layout_alignStart="@+id/departure"
         android:layout_alignTop="@+id/tvEstmStay"
-        android:ems="3"
+        android:ems="2"
         android:inputType="numberDecimal"
         android:maxLength="3"
-        android:padding="5dp" />
+        android:padding="4dp"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/btnConfirm"
@@ -169,8 +173,7 @@
         android:padding="3dp"
         android:text="Confirm"
         android:textAlignment="textStart"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold" />
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:id="@+id/textView2"
@@ -178,7 +181,12 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/estm_stay"
         android:layout_toEndOf="@+id/estm_stay"
-        android:padding="5dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="4dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="4dp"
+        android:paddingStart="0dp"
+        android:paddingTop="4dp"
         android:text="days"
         android:textColor="@android:color/black" />
 

@@ -43,7 +43,7 @@
 
             <TextView
                 android:id="@+id/tvOriginAirport"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvOrigin"
                 android:layout_below="@+id/tvOrigin"
@@ -53,11 +53,12 @@
                 android:paddingTop="2dp"
                 android:text="Airport:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/tvFlightNo"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvOriginAirport"
                 android:layout_below="@+id/tvOriginAirport"
@@ -66,11 +67,12 @@
                 android:padding="5dp"
                 android:text="Flight No.:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/tvFlightTime"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvFlightNo"
                 android:layout_below="@+id/tvFlightNo"
@@ -79,6 +81,7 @@
                 android:padding="5dp"
                 android:text="Flight Time:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -99,7 +102,7 @@
 
             <TextView
                 android:id="@+id/tvAirportTransit"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvTansitInfo"
                 android:layout_below="@+id/tvTansitInfo"
@@ -108,11 +111,12 @@
                 android:padding="5dp"
                 android:text="Airport:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/tvFlightNoTransit"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvAirportTransit"
                 android:layout_below="@+id/tvAirportTransit"
@@ -121,11 +125,12 @@
                 android:padding="5dp"
                 android:text="Flight No.:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/tvFlightTimeTransit"
-                android:layout_width="85dp"
+                android:layout_width="96dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvFlightNoTransit"
                 android:layout_below="@+id/tvFlightNoTransit"
@@ -134,6 +139,7 @@
                 android:padding="5dp"
                 android:text="Flight Time:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -154,7 +160,7 @@
 
             <TextView
                 android:id="@+id/tvArrivalAirport"
-                android:layout_width="89dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvArrival"
                 android:layout_below="@+id/tvArrival"
@@ -163,11 +169,12 @@
                 android:padding="5dp"
                 android:text="Airport:"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/tvArrivalTime"
-                android:layout_width="89dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tvArrivalAirport"
                 android:layout_below="@+id/tvArrivalAirport"
@@ -175,6 +182,7 @@
                 android:background="@android:color/darker_gray"
                 android:padding="5dp"
                 android:text="Arrival Time:"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black" />
 
             <EditText
@@ -189,7 +197,8 @@
                 android:hint="Airport"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:maxLength="28"/>
 
             <EditText
                 android:id="@+id/origin_flight_no"
@@ -203,7 +212,8 @@
                 android:hint="Flight No"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:maxLength="28"/>
 
             <TextView
                 android:id="@+id/origin_flight_time"
@@ -222,7 +232,7 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
                 android:textColor="@android:color/white"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/transit_airport_name"
@@ -236,7 +246,8 @@
                 android:hint="Airport"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:maxLength="28"/>
 
             <EditText
                 android:id="@+id/transit_flight_no"
@@ -250,7 +261,8 @@
                 android:hint="Flight No."
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:maxLength="28"/>
 
             <TextView
                 android:id="@+id/transit_flight_time"
@@ -269,19 +281,20 @@
                 android:text="Flight Time"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/arrival_airport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/arrival_time"
-                android:layout_alignStart="@+id/tvFlightInfo"
+                android:layout_alignTop="@+id/tvArrivalAirport"
+                android:layout_toEndOf="@+id/tvArrivalAirport"
                 android:ems="10"
                 android:hint="Airport"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:maxLength="28"/>
 
             <TextView
                 android:id="@+id/arrival_time"
@@ -301,7 +314,7 @@
                 android:text="Flight Time"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/white"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnConfirm"

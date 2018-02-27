@@ -124,8 +124,9 @@ public class AdminExpertList extends BaseActivity {
                     final String expertIDkey = getRef(position).getKey();
 
                     viewHolder.setName(model.getName());
+                    viewHolder.setEmail(model.getEmail());
                     viewHolder.setImage(getApplicationContext(),model.getImage());
-                    //viewHolder.setArrivalDate(model.getArrival());
+
                     //viewHolder.setDepartureDate(model.getDeparture());
 
                     //Click on profile
@@ -159,13 +160,13 @@ public class AdminExpertList extends BaseActivity {
             lname.setText(name);
         }
 
-   /*     public void setArrivalDate(String arrival_date){
+        public void setEmail(String email){
 
-            TextView larrival_date = (TextView)itemView.findViewById(R.id.l_arrival_date);
-            larrival_date.setText(arrival_date);
+            TextView lemail = mView.findViewById(R.id.TvEmail);
+            lemail.setText(email);
         }
 
-        public void setDepartureDate(String departureDate){
+      /*  public void setDepartureDate(String departureDate){
 
             TextView ldeparture_date = (TextView)itemView.findViewById(R.id.l_departure_date);
             ldeparture_date.setText(departureDate);

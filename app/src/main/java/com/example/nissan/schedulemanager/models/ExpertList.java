@@ -23,6 +23,15 @@ public class ExpertList {
     private String transit_flight_no;
     private String transit_flight_time;
     private String image;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getImage() {
         return image;

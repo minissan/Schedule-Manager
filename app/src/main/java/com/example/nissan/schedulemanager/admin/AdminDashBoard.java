@@ -1,5 +1,6 @@
 package com.example.nissan.schedulemanager.admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -99,5 +100,12 @@ public class AdminDashBoard extends AppCompatActivity {
         adapter.addFragment(flightFragment);
         adapter.addFragment(hotelFragment);
         viewPager.setAdapter(adapter);
+    }
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        startActivity(new Intent(AdminDashBoard.this,AdminExpertList.class));
+        finish();
     }
 }

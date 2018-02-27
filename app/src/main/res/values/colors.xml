@@ -15,4 +15,5 @@
     <color name="transit">#4682b4</color>
     <color name="arrival">#9acd32</color>
     <color name="flight_info">#4b0082</color>
+    <color name="expert_name">#fd05822f</color>
 </resources>

@@ -30,7 +30,8 @@
         <activity android:name=".expert.DateSelectActivity" />
         <activity android:name=".admin.AdminLoginActivity" />
         <activity android:name=".guest.GuestLoginActivity" />
-        <activity android:name=".admin.AdminDashBoard" />
+        <activity android:name=".admin.AdminDashBoard"
+                android:parentActivityName=".admin.AdminExpertList"/>
         <activity
             android:name=".admin.AdminExpertList"
             android:label="Dash Board"
