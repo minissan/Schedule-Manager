@@ -30,14 +30,11 @@
         <activity android:name=".expert.DateSelectActivity" />
         <activity android:name=".admin.AdminLoginActivity" />
         <activity android:name=".guest.GuestLoginActivity" />
-        <activity android:name=".admin.AdminDashBoard"
-                android:parentActivityName=".admin.AdminExpertList"/>
+        <activity
+            android:name=".admin.AdminDashBoard"
+            android:parentActivityName=".admin.AdminExpertList" />
         <activity
             android:name=".admin.AdminExpertList"
-            android:label="Dash Board"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".guest.GuestDashBoard"
             android:label="Dash Board"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -48,6 +45,12 @@
         <activity android:name=".admin.DashboardAdminUpdate" />
         <activity android:name=".admin.FlightAdminUpdate" />
         <activity android:name=".admin.HotelAdminUpdate" />
+        <activity android:name=".guest.GuestDashBoard" />
+        <activity android:name=".guest.GuestExpertList" />
+        <activity android:name=".expert.fragments.GuestDashboardFragment" />
+        <activity android:name=".guest.fragments.GuestDashboardFragment" />
+        <activity android:name=".guest.fragments.GuestFlightInfoFragment" />
+        <activity android:name=".guest.fragments.GuestHotelInfoFragment"></activity>
     </application>
 
 </manifest>
